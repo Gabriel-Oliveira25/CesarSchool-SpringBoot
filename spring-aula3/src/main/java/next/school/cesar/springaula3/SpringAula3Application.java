@@ -24,7 +24,7 @@ public class SpringAula3Application {
 	 * DELETE = @DeleteMapping
 	 */
 	
-	@GetMapping("/") //localhost:8080/api/hello
+	@GetMapping("/") //localhost:8080/api/
 	public String hello() {
 		return "hello";
 	}
