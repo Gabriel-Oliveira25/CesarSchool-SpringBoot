@@ -5,11 +5,14 @@ import org.hibernate.annotations.UuidGenerator;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
+
+
 
 
 @Getter
@@ -30,4 +33,7 @@ public class Product{
 	
 	@Column(name="PROD_PRICE", nullable=false)
 	private float price;
+	
+    @ManyToOne
+    private Category category;
 }
