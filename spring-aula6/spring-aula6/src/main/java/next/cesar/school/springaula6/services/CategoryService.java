@@ -20,15 +20,12 @@ public class CategoryService {
 		return repository.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Category not found"));
 	}
 	
-	public Category insertCategory(Category category) {
+	public Category insertCategory(Category category){
 		return repository.save(category);
 	}
 	
 	public List<Category> getAllCategories() {
-		if (repository.findAll().isEmpty()) {
-			return null;
-		} else {
 			return repository.findAll();
-		}
+		
 	}
 }

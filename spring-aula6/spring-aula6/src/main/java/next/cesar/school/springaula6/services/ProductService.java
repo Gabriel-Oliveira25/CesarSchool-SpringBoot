@@ -1,9 +1,12 @@
 package next.cesar.school.springaula6.services;
 
 import java.util.List;
+
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
+
 import lombok.RequiredArgsConstructor;
 import next.cesar.school.springaula6.entities.Product;
 import next.cesar.school.springaula6.repositories.ProductRepository;

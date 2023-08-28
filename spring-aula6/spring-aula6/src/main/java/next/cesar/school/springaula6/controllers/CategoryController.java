@@ -24,11 +24,8 @@ public class CategoryController {
 	
 	@GetMapping
 	public ResponseEntity<List<Category>> getAllProducts() {
-		if (categoryService.getAllCategories() == null) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		} else {
-			return new ResponseEntity<List<Category>>(categoryService.getAllCategories(), HttpStatus.OK);
-		}
+		return new ResponseEntity<List<Category>>(categoryService.getAllCategories(), HttpStatus.OK);
+		
 	}
 
 	@PostMapping
